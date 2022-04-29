@@ -33,17 +33,13 @@ const users = [
 ]
 
 let media = [];
+let mediatotal =0;
 
 for (const user of users) {
     for (const key in user.favoritesSounds) {
-        media.push(user.favoritesSounds[key].volume);
+        mediatotal += user.favoritesSounds[key].volume;
     }
 }
 
-let mediatotal =0;
-
-for(let i=0; i<media.length; i++){
-    mediatotal+=media[i];
-}
 
 console.log(mediatotal/media.length)
